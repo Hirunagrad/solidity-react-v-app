@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.15;
+pragma solidity >=0.4.22 <0.9.0;
 
 contract Election{
     
@@ -34,12 +34,13 @@ contract Election{
     function Vote(uint _id) public{
         //the person has not vote again
         require(!votedornot[msg.sender], 'you have voted for the participant');
+        
         //the id that the person has input is available
         require(candidates[_id].id !=0 , 'the id doesent exist');
         //increase the vote count of the person whom the candidates[_id].votecount += 1
         candidates[_id].votecount +=1;
         //bool true
-        votedornot[msg.sender] = false;
+        votedornot[msg.sender] = true;
 
         emit electionupdated(_id,candidates[_id].name,candidates[_id].votecount);
     }
