@@ -1,1 +1,1 @@
-# solidity-react-v-app
+# solidity-react-blockchain-app
