@@ -7,7 +7,7 @@
 #### React
 #### Ethereum testnet
 
-<br/>
+<br>
 ### truffle commands
 ##### truffle init : create project
 ##### truffle migrate --reset : run the project
